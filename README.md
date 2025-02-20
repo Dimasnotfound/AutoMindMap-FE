@@ -1,50 +1,85 @@
-# React + TypeScript + Vite
+# AutoMindMap Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Aplikasi React & TypeScript yang mengubah teks menjadi mind map interaktif. Cocok untuk brainstorming, merangkum informasi, dan mempercepat pemahaman konten.
 
-Currently, two official plugins are available:
+## Fitur
+- **Input Teks & Ekstraksi**: Memasukkan teks secara langsung dan menampilkannya sebagai mind map.
+- **Visualisasi Interaktif**: D3.js untuk drag, zoom, dan penyesuaian posisi node.
+- **Struktur Modular**: React TypeScript dengan komponen yang terorganisir, memudahkan pengembangan dan pemeliharaan.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Prasyarat
+- Node.js (disarankan versi LTS)
+- npm atau yarn (untuk instalasi dependensi)
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+## Instalasi
+### Kloning repositori:
+```bash
+git clone https://github.com/username/AutoMindMap-FE.git
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
-
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+### Masuk ke direktori proyek:
+```bash
+cd AutoMindMap-FE
 ```
+
+### Instal dependensi:
+```bash
+npm install
+```
+atau
+```bash
+yarn
+```
+
+## Konfigurasi
+Secara default, aplikasi mengakses API di `http://localhost:8000/process`.
+
+Jika Anda ingin mengubahnya, buka file `App.tsx` dan sesuaikan URL di `axios.post`.
+
+## Menjalankan Aplikasi
+### Jalankan server pengembangan:
+```bash
+npm start
+```
+atau
+```bash
+yarn start
+```
+
+Buka [http://localhost:3000](http://localhost:3000) di peramban untuk melihat aplikasi.
+
+## Struktur Direktori
+```
+.
+├── public/                # File statis (favicon, index.html)
+├── src/
+│   ├── components/
+│   │   └── MindMap.tsx   # Komponen visualisasi mind map
+│   ├── App.tsx           # Komponen utama (input teks, fetch data)
+│   ├── index.tsx         # Entry point React
+│   ├── types.d.ts        # Definisi tipe data TypeScript
+│   └── ... (file lainnya)
+├── package.json
+└── tsconfig.json
+```
+
+## Penggunaan
+1. Masukkan teks di kolom yang disediakan.
+2. Klik "Proses Teks" untuk mengirimkan data ke backend dan mendapatkan struktur mind map.
+3. Jelajahi mind map:
+   - Drag node untuk memindahkan posisi.
+   - Gunakan scroll (jika diimplementasikan zoom) untuk memperbesar/memperkecil tampilan.
+
+## Pengembangan Lebih Lanjut
+- **Kustomisasi Warna & Ukuran Node**: Sesuaikan di `MindMap.tsx`.
+- **Tambah Fitur Zoom & Pan**: Gunakan `d3.zoom`.
+- **Integrasi State Management**: Pilih Redux/Zustand jika dibutuhkan.
+
+## Kontribusi
+1. Fork repositori ini.
+2. Buat branch baru untuk setiap fitur/perbaikan.
+3. Lakukan pull request dengan deskripsi perubahan.
+
+## Lisensi
+Proyek ini dilisensikan di bawah **MIT License**. Silakan gunakan, modifikasi, dan bagikan sesuai ketentuan lisensi.
+
