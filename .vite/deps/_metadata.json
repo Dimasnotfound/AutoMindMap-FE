@@ -1,46 +1,52 @@
 {
-  "hash": "7a62e1a2",
+  "hash": "22823850",
   "configHash": "b4a42d8b",
-  "lockfileHash": "dbf766eb",
-  "browserHash": "50a6f2a0",
+  "lockfileHash": "dbd68583",
+  "browserHash": "00c28107",
   "optimized": {
     "react/jsx-dev-runtime": {
       "src": "../../node_modules/react/jsx-dev-runtime.js",
       "file": "react_jsx-dev-runtime.js",
-      "fileHash": "016909d7",
+      "fileHash": "e6a7fb65",
       "needsInterop": true
     },
     "react": {
       "src": "../../node_modules/react/index.js",
       "file": "react.js",
-      "fileHash": "d6219fa7",
+      "fileHash": "a98f98b8",
       "needsInterop": true
     },
     "react-dom/client": {
       "src": "../../node_modules/react-dom/client.js",
       "file": "react-dom_client.js",
-      "fileHash": "e32f912a",
+      "fileHash": "ceb39332",
       "needsInterop": true
     },
     "axios": {
       "src": "../../node_modules/axios/index.js",
       "file": "axios.js",
-      "fileHash": "e1417d3b",
+      "fileHash": "a856dab8",
       "needsInterop": false
     },
     "d3": {
       "src": "../../node_modules/d3/src/index.js",
       "file": "d3.js",
-      "fileHash": "24697a4f",
+      "fileHash": "2c9eca31",
+      "needsInterop": false
+    },
+    "react-helmet": {
+      "src": "../../node_modules/react-helmet/es/Helmet.js",
+      "file": "react-helmet.js",
+      "fileHash": "7eef75d1",
       "needsInterop": false
     }
   },
   "chunks": {
-    "chunk-ZBETSLDL": {
-      "file": "chunk-ZBETSLDL.js"
+    "chunk-2GK3IQSO": {
+      "file": "chunk-2GK3IQSO.js"
     },
-    "chunk-HKJ2B2AA": {
-      "file": "chunk-HKJ2B2AA.js"
+    "chunk-G3PMV62Z": {
+      "file": "chunk-G3PMV62Z.js"
     }
   }
 }

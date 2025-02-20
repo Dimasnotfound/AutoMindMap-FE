@@ -1,7 +1,7 @@
-// src/App.tsx
 import React, { useState } from 'react';
 import axios from 'axios';
 import MindMap from './components/MindMap';
+import { Helmet } from 'react-helmet';
 import './App.css';
 
 interface Node {
@@ -38,10 +38,12 @@ const App: React.FC = () => {
       setLoading(false);
     }
   };
-  
 
   return (
     <div className="App">
+      <Helmet>
+        <title>AutoMindMap</title>
+      </Helmet>
       <h1>AutoMindMap</h1>
       <form onSubmit={handleSubmit}>
         <textarea 
