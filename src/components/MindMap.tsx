@@ -95,7 +95,7 @@ const MindMap: React.FC<MindMapProps> = ({ data }) => {
       .append("text")
       .text(d => d.text)
       .attr("font-size", 12)
-      .attr("fill", "#fff") // pastikan warna kontras dengan background
+      .attr("fill", "#fff")
       .attr("text-anchor", "middle")
       .attr("dy", 4);
 
